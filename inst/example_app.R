@@ -16,7 +16,7 @@ server <- function(input, output, session){
   r <- reactiveValues()
 
   observeEvent( input$setcookie , {
-    add_cookie(input$cookie_name, input$cookie_content)
+    add_cookie(input$cookie_name, input$cookie_content, session)
   })
   observeEvent( input$getcookie , {
     r$cook <- fetch_cookies(session, input)

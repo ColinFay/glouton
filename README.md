@@ -27,9 +27,12 @@ In the UI, add `use_glouton()` to integrate `{glouton}` to your app.
 
 In the server, you can use:
 
-  - `add_cookie` to add a session cookie.
-  - `fetch_cookies` / `fetch_cookie` to get all or one cookie
-  - `remove_cookie` to remove one cookie
+  - `add_cookie` to add a session cookie. Takes a name, content, and the
+    `session` object.
+  - `fetch_cookies` / `fetch_cookie` to get all or one cookie. Takes the
+    `session` and `input` objects and a name for `fetch_cookie()`
+  - `remove_cookie` to remove one cookie. Takes a name of a cookie and
+    the `session` object.
 
 ## Example
 
@@ -55,7 +58,7 @@ server <- function(input, output, session){
   r <- reactiveValues()
 
   observeEvent( input$setcookie , {
-    add_cookie(input$cookie_name, input$cookie_content)
+    add_cookie(input$cookie_name, input$cookie_content, session)
   })
   observeEvent( input$getcookie , {
     r$cook <- fetch_cookies(session, input)
