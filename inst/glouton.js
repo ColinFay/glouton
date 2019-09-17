@@ -11,7 +11,7 @@ $(document).on('shiny:connected', function(event) {
     Shiny.setInputValue("gloutoncookie", res, {priority: "event"});
   });
 
-  Shiny.addCustomMessageHandler('fetchcookie', function(arg) {
+  Shiny.addCustomMessageHandler('fetchcookies', function(arg) {
     sendCookies();
   });
 
