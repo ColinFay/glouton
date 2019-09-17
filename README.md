@@ -1,29 +1,21 @@
----
-output: github_document
----
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
-)
-```
 # glouton
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
-The goal of glouton is to handle browser cookies in shiny. 
+The goal of glouton is to handle browser cookies in shiny.
 
-It's built on top of [js-cookie](https://github.com/js-cookie/js-cookie).
+It’s built on top of
+[js-cookie](https://github.com/js-cookie/js-cookie).
 
 ## Installation
 
-You can install the released version of glouton from [github](https://github.com/ColinFay/glouton) with:
+You can install the released version of glouton from
+[github](https://github.com/ColinFay/glouton) with:
 
 ``` r
 remotes::install_github("ColinFay/glouton")
@@ -33,17 +25,17 @@ remotes::install_github("ColinFay/glouton")
 
 In the UI, add `use_glouton()` to integrate `{glouton}` to your app.
 
-In the server, you can use: 
+In the server, you can use:
 
-+ `add_cookie` to add a session cookie.
-+ `fetch_cookies` / `fetch_cookie` to get all or one cookie
-+ `remove_cookie` to remove one cookie
+  - `add_cookie` to add a session cookie.
+  - `fetch_cookies` / `fetch_cookie` to get all or one cookie
+  - `remove_cookie` to remove one cookie
 
 ## Example
 
 This is a basic example which shows you how to solve a common problem:
 
-```{r example, eval = FALSE}
+``` r
 library(glouton)
 library(shiny)
 ui <- function(request){
@@ -80,4 +72,5 @@ shinyApp(ui, server)
 
 ## TO DO
 
-+ Support passing domain / path / expire to cookie https://github.com/js-cookie/js-cookie#basic-usage
+  - Support passing domain / path / expire to cookie
+    <https://github.com/js-cookie/js-cookie#basic-usage>
