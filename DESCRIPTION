@@ -1,0 +1,26 @@
+Package: glouton
+Type: Package
+Title: 'JS-cookies' for 'Shiny'
+Version: 0.0.0.9000
+Authors@R: 
+    c(person(given = "Colin",
+             family = "Fay",
+             role = c("cre", "aut"),
+             email = "contact@colinfay.me",
+             comment = c(ORCID = "0000-0001-7343-1846")),
+      person(given = "Klaus",
+             family = "Hartl",
+             role = c("ctb", "cph"),
+             comment = "Author of JS-Cookies"),
+      person(given = "Klaus",
+             family = "Hartl",
+             role = c("ctb", "cph"),
+             comment = "Author of JS-Cookies"))
+Description: Set and get browser cookies in 'Shiny' through 
+    'JS-cookie'.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+Imports: 
+    shiny
