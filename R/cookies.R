@@ -48,21 +48,27 @@ use_glouton <- function(online = TRUE){
 #' @export
 #' @rdname cookies
 
-fetch_cookies <- function(input, session){
+fetch_cookies <- function(session = NULL){
+  if(is.null(session))
+    session <- shiny::getDefaultReactiveDomain()
   session$sendCustomMessage("fetchcookies", TRUE)
-  return(input$gloutoncookies)
+  return(session$input[["gloutoncookies"]])
 }
 
 #' @export
 #' @rdname cookies
-fetch_cookie <- function(name, input, session){
+fetch_cookie <- function(name, session = NULL){
+  if(is.null(session))
+    session <- shiny::getDefaultReactiveDomain()
   session$sendCustomMessage("fetchcookie", TRUE)
-  return(input$gloutoncookies)
+  return(session$input[["gloutoncookies"]])
 }
 
 #' @export
 #' @rdname cookies
-add_cookie <- function(name, value, session){
+add_cookie <- function(name, value, session = NULL){
+  if(is.null(session))
+    session <- shiny::getDefaultReactiveDomain()
   session$sendCustomMessage("addcookie", list(
     name = name, value = value
   ))
@@ -70,7 +76,9 @@ add_cookie <- function(name, value, session){
 
 #' @export
 #' @rdname cookies
-remove_cookie <- function(name, session){
+remove_cookie <- function(name, session = NULL){
+  if(is.null(session))
+    session <- shiny::getDefaultReactiveDomain()
   session$sendCustomMessage("rmcookie", list(
     name = name
   ))
