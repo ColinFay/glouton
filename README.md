@@ -1,40 +1,36 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-# glouton
+glouton
+=======
 
 <!-- badges: start -->
-
 <!-- badges: end -->
-
 The goal of glouton is to handle browser cookies in shiny.
 
-It’s built on top of
-[js-cookie](https://github.com/js-cookie/js-cookie).
+It's built on top of [js-cookie](https://github.com/js-cookie/js-cookie).
 
-## Installation
+Installation
+------------
 
-You can install the released version of glouton from
-[github](https://github.com/ColinFay/glouton) with:
+You can install the released version of glouton from [github](https://github.com/ColinFay/glouton) with:
 
 ``` r
 remotes::install_github("ColinFay/glouton")
 ```
 
-## Function reference
+Function reference
+------------------
 
 In the UI, add `use_glouton()` to integrate `{glouton}` to your app.
 
 In the server, you can use:
 
-  - `add_cookie` to add a session cookie. Takes a name, content, and the
-    `session` object.
-  - `fetch_cookies` / `fetch_cookie` to get all or one cookie. Takes the
-    `session` and `input` objects and a name for `fetch_cookie()`
-  - `remove_cookie` to remove one cookie. Takes a name of a cookie and
-    the `session` object.
+-   `add_cookie` to add a session cookie. Takes a name, content, and the `session` object.
+-   `fetch_cookies` / `fetch_cookie` to get all or one cookie. Takes the `session` and `input` objects and a name for `fetch_cookie()`
+-   `remove_cookie` to remove one cookie. Takes a name of a cookie and the `session` object.
 
-## Example
+Example
+-------
 
 This is a basic example which shows you how to solve a common problem:
 
@@ -53,15 +49,15 @@ ui <- function(request){
   )
 }
 
-server <- function(input, output, session){
+server <- function(input, output){
 
   r <- reactiveValues()
 
   observeEvent( input$setcookie , {
-    add_cookie(input$cookie_name, input$cookie_content, session)
+    add_cookie(input$cookie_name, input$cookie_content)
   })
   observeEvent( input$getcookie , {
-    r$cook <- fetch_cookies(session, input)
+    r$cook <- fetch_cookies()
   })
 
   output$cook <- renderPrint({
@@ -73,7 +69,7 @@ server <- function(input, output, session){
 shinyApp(ui, server)
 ```
 
-## TO DO
+TO DO
+-----
 
-  - Support passing domain / path / expire to cookie
-    <https://github.com/js-cookie/js-cookie#basic-usage>
+-   Support passing domain / path / expire to cookie <https://github.com/js-cookie/js-cookie#basic-usage>

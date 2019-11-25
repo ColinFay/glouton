@@ -58,15 +58,15 @@ ui <- function(request){
   )
 }
 
-server <- function(input, output, session){
+server <- function(input, output){
 
   r <- reactiveValues()
 
   observeEvent( input$setcookie , {
-    add_cookie(input$cookie_name, input$cookie_content, session)
+    add_cookie(input$cookie_name, input$cookie_content)
   })
   observeEvent( input$getcookie , {
-    r$cook <- fetch_cookies(session, input)
+    r$cook <- fetch_cookies()
   })
 
   output$cook <- renderPrint({
