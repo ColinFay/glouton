@@ -1,0 +1,6 @@
+^test\.R$
+.vscode
+LICENSE.md
+README.Rmd
+README.html
+glouton.Rproj

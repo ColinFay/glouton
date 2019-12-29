@@ -16,11 +16,11 @@ add_cookie(name, value, session = NULL)
 remove_cookie(name, session = NULL)
 }
 \arguments{
+\item{session}{the `input` and `session` object from Shiny}
+
 \item{name}{name of the cookie to set/fetch}
 
 \item{value}{the value to set for the cookie}
-
-\item{input, session}{the `input` and `session` object from Shiny}
 }
 \description{
 `fetch_cookies` returns all the cookies, while `fetch_cookie` search for
