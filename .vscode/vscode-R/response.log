@@ -12,3 +12,5 @@
 {"time":"2019-12-29 22:15:37","pid":10153,"command":"browser","url":"http://127.0.0.1:4212"} 
 {"time":"2019-12-29 22:15:58","pid":10153,"command":"browser","url":"http://127.0.0.1:4212"} 
 {"time":"2019-12-29 22:22:51","pid":10153,"command":"browser","url":"http://127.0.0.1:4212"} 
+{"time":"2019-12-31 15:13:53","pid":3402,"command":"attach"} 
+{"time":"2019-12-31 15:13:59","pid":3402,"command":"browser","url":"http://127.0.0.1:4218"} 

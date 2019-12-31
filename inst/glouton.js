@@ -27,7 +27,7 @@ $(document).on('shiny:connected', function(event) {
 
   // R6Class
   function send_cookie(name){
-    var res = Cookies.get();
+    var res = Cookies.get(name);
     Shiny.setInputValue(name, res, {priority: "event"});
   }
 
