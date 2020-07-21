@@ -21,7 +21,7 @@ $(document).on('shiny:connected', function(event) {
   });
 
   Shiny.addCustomMessageHandler('rmcookie', function(arg) {
-    Cookies.remove(arg);
+    Cookies.remove(arg.name);
     sendCookies();
   });
 
