@@ -1,0 +1,14 @@
+{
+  "server": {
+    "class": "function",
+    "type": "closure",
+    "length": 1,
+    "str": "function (input, output)"
+  },
+  "ui": {
+    "class": ["shiny.tag.list", "list"],
+    "type": "list",
+    "length": 3,
+    "str": "List of 3"
+  }
+}

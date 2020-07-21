@@ -7,16 +7,16 @@
 \alias{remove_cookie}
 \title{Add and fetch browsers cookies}
 \usage{
-fetch_cookies(input, session)
+fetch_cookies(session = NULL)
 
-fetch_cookie(name, input, session)
+fetch_cookie(name, session = NULL)
 
-add_cookie(name, value, session)
+add_cookie(name, value, session = NULL)
 
-remove_cookie(name, session)
+remove_cookie(name, session = NULL)
 }
 \arguments{
-\item{input, session}{the `input` and `session` object from Shiny}
+\item{session}{the `input` and `session` object from Shiny}
 
 \item{name}{name of the cookie to set/fetch}
 
