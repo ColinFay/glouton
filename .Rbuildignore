@@ -1,13 +1,10 @@
-<<<<<<< HEAD
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^README\.Rmd$
 ^LICENSE\.md$
-=======
 ^test\.R$
 .vscode
 LICENSE.md
 README.Rmd
 README.html
 glouton.Rproj
->>>>>>> 2f15af166ed766dc0bdd449d2259faf2eca6a037
