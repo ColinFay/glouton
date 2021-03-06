@@ -2,6 +2,7 @@
 
 export(Cookie)
 export(add_cookie)
+export(cookie_options)
 export(fetch_cookie)
 export(fetch_cookies)
 export(remove_cookie)
