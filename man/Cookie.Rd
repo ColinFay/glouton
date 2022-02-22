@@ -18,9 +18,10 @@ Create a cookie object.
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
+\if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{Cookie$new(name, session = NULL)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{Cookie$new(name, session = shiny::getDefaultReactiveDomain())}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
@@ -39,6 +40,7 @@ Create a Cookie
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-get"></a>}}
+\if{latex}{\out{\hypertarget{method-get}{}}}
 \subsection{Method \code{get()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{Cookie$get()}\if{html}{\out{</div>}}
@@ -51,6 +53,7 @@ Get the value of the cookie
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-set"></a>}}
+\if{latex}{\out{\hypertarget{method-set}{}}}
 \subsection{Method \code{set()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{Cookie$set(value, expires = 365L, path = "/")}\if{html}{\out{</div>}}
@@ -74,6 +77,7 @@ Set the value of the cookie
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-rm"></a>}}
+\if{latex}{\out{\hypertarget{method-rm}{}}}
 \subsection{Method \code{rm()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{Cookie$rm()}\if{html}{\out{</div>}}
@@ -86,6 +90,7 @@ Remove the cookie.
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

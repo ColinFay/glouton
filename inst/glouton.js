@@ -16,7 +16,8 @@ $(document).on('shiny:connected', function(event) {
   });
 
   Shiny.addCustomMessageHandler('addcookie', function(arg) {
-    Cookies.set(arg.name, arg.value);
+    var c = Cookies.set(arg.name, arg.value, arg.options);
+    if (arg.debug) console.log(c);
     sendCookies();
   });
 

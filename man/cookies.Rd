@@ -5,24 +5,66 @@
 \alias{fetch_cookie}
 \alias{add_cookie}
 \alias{remove_cookie}
+\alias{cookie_options}
 \title{Add and fetch browsers cookies}
 \usage{
-fetch_cookies(session = NULL)
+fetch_cookies(session = shiny::getDefaultReactiveDomain())
 
-fetch_cookie(name, session = NULL)
+fetch_cookie(name, session = shiny::getDefaultReactiveDomain())
 
-add_cookie(name, value, session = NULL)
+add_cookie(
+  name,
+  value,
+  options = cookie_options(),
+  debug = FALSE,
+  session = shiny::getDefaultReactiveDomain()
+)
 
-remove_cookie(name, session = NULL)
+remove_cookie(
+  name,
+  options = cookie_options(),
+  session = shiny::getDefaultReactiveDomain()
+)
+
+cookie_options(
+  expires = NULL,
+  path = "/",
+  domain = NULL,
+  secure = FALSE,
+  sameSite = "strict"
+)
 }
 \arguments{
-\item{session}{the `input` and `session` object from Shiny}
+\item{session}{The \code{session} object passed to function given to
+\code{shinyServer}. Default is \code{\link[shiny:domains]{shiny::getDefaultReactiveDomain()}}}
 
-\item{name}{name of the cookie to set/fetch}
+\item{name}{Name of the cookie to set/fetch}
 
-\item{value}{the value to set for the cookie}
+\item{value}{The value to set for the cookie}
+
+\item{options}{A list of options returned from \code{cookie_options()}. The same
+options that were passed to \code{add_cookie()} must be passed to
+\code{remove_cookie()}.}
+
+\item{debug}{If \code{TRUE}, a message is displayed in the browser console after
+adding a cookie.}
+
+\item{expires}{Define when the cookie will be removed. Value must be a
+numeric, which will be interpreted as days from time of creation or
+a date. If \code{NULL}, the cookie becomes a session cookie.}
+
+\item{path}{A string indicating the path where the cookie is visible.}
+
+\item{domain}{A string indicating a valid domain where the cookie should be
+visible. The cookie will also be visible to all subdomains.}
+
+\item{secure}{Boolean indicating whether the cookie transmission requires a
+secure protocol (https).}
+
+\item{sameSite}{A string allowing to control whether the browser is sending
+a cookie along with cross-site requests.}
 }
 \description{
-`fetch_cookies` returns all the cookies, while `fetch_cookie` search for
+\code{fetch_cookies} returns all the cookies, while \code{fetch_cookie} search for
 one cookie in the browser.
 }
